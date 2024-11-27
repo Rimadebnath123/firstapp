@@ -1,0 +1,17 @@
+App.js
+<>
+      {/* <Navbar title="TextUtils" aboutText="About TextUtils"/> */}
+      <Router>
+        <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+        <Alert alert={alert} />
+        <div className="container my-1">
+          <Routes>
+            {/* /users-->component 1
+          /users-/home  -->component 2 */}
+            <Route exact path="/about" element={<About mode={mode} />} />
+            <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Try TextUtils-Word Counter,Character Counter,Remove extra spaces" mode={mode} />} />
+            {/* <TextForm showAlert={showAlert} heading="Enter the text to analyze below" mode={mode} /> */}
+          </Routes>
+        </div>
+      </Router>
+    </>
